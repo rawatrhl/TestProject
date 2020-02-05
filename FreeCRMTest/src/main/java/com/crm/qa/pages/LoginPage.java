@@ -8,26 +8,23 @@ import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase{
 	
-	//Page Factory - OR
-	@FindBy(xpath="//*[@id='ap_email']")
-	WebElement userName;
 	
-	@FindBy(xpath="//span[@id='continue']")
-	WebElement continueButton;
+	//Page Factory  - OR
+	@FindBy(xpath = "//ul[@class='rd-navbar-nav']/a/span")
+	WebElement loginButton;
 	
-	@FindBy(xpath = "//*[@id='ap_password']")
-	WebElement passwordInput;
+	@FindBy(xpath = "//input[@name=\"email\"]")
+	WebElement emailId;
 	
-	@FindBy(xpath="//*[@id='signInSubmit']")
-	WebElement signIn;
+	@FindBy(xpath = "//input[@name = 'password']")
+	WebElement password; 
 	
-	@FindBy(id="createAccountSubmit")
-	WebElement createAccount;
+	@FindBy(xpath = "//div[text() = 'Login']")
+	WebElement login;
 	
-	@FindBy(xpath = "//i[contains(@class, 'a-icon a-icon-logo')]")
-	WebElement logo;
+	@FindBy(xpath="/html/body/div[1]/header/div/nav/div[2]/div/div[1]/div/a/svg/image")
+	WebElement crmLogo;
 	
-	//Initializing the page Objects;
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -36,20 +33,16 @@ public class LoginPage extends TestBase{
 		return driver.getTitle();
 	}
 	
-	public boolean validateAmazonLogo() {
-		return logo.isDisplayed();
+	public void login(String un, String pwd) {
+		this.loginButton.click();
+		emailId.sendKeys(un);
+		password.sendKeys(pwd);
+		login.click();	
 	}
 	
-	public HomePage login(String username, String password) throws InterruptedException {
-		Thread.sleep(2000);
-		userName.sendKeys(username);
-		Thread.sleep(2000);
-		continueButton.click();
-		
-		Thread.sleep(2000);
-		passwordInput.sendKeys(password);
-		Thread.sleep(2000);
-		signIn.click();
-		return new HomePage();
+	public boolean validateCRMImage() {
+		return crmLogo.isDisplayed();
 	}
+	
+	
 }

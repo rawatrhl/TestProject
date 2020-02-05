@@ -21,7 +21,7 @@ public class TestBase {
 	public  TestBase() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream("C:\\Users\\DELL\\eclipse-workspace\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
+			FileInputStream ip = new FileInputStream("C:\\Users\\DELL\\git\\TestProject\\FreeCRMTest\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 			prop.load(ip);
 		}catch(FileNotFoundException e) {
 			e.printStackTrace();
@@ -29,7 +29,6 @@ public class TestBase {
 			e.printStackTrace();
 		}
 	}
-	
 	
 	public static void initialization() {
 		String browserName = prop.getProperty("browser");
