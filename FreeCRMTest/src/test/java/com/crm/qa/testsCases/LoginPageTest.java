@@ -23,17 +23,16 @@ public class LoginPageTest extends TestBase{
 	}
 	
 	@Test(priority = 1)
-	public void loginPageTitleTest() {
+	public void loginPageTitleTest1() {
 		String title = loginPage.validateLoginPageTitle();
 		Assert.assertEquals(title, prop.getProperty("title"));
 	}
 	
-	@Test(priority = 3)
-	public void loginTest() throws InterruptedException {
+	@Test(priority = 2)
+	public void loginTest() {
 		loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
-		new WebDriverWait(driver, 20);
 	}
-	
+		
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();

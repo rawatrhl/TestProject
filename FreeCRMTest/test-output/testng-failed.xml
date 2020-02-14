@@ -7,8 +7,8 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="amazonLogoImageTest"/>
-          <include name="loginPageTitleTest"/>
+          <include name="loginTest"/>
+          <include name="loginPageTitleTest1"/>
         </methods>
       </class> <!-- com.crm.qa.testsCases.LoginPageTest -->
     </classes>

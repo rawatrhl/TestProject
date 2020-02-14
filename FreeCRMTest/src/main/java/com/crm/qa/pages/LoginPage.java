@@ -34,7 +34,7 @@ public class LoginPage extends TestBase{
 	}
 	
 	public void login(String un, String pwd) {
-		this.loginButton.click();
+		loginButton.click();
 		emailId.sendKeys(un);
 		password.sendKeys(pwd);
 		login.click();	
