@@ -1,4 +1,4 @@
-package com.crm.qa.pages;
+package com.crm.qa.testsCases;
 
 public class BrowsingHistory {
 
