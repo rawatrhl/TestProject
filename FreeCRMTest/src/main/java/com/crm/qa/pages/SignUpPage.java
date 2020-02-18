@@ -1,7 +1,9 @@
 package com.crm.qa.pages;
 
-import com.crm.qa.base.TestBase;
+import com.crm.qa.webElements.SignUpPageElements;
 
-public class SignUpPage extends TestBase{
+public class SignUpPage extends SignUpPageElements{
+	
+	//methods
 
 }

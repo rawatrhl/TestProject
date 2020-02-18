@@ -1,16 +1,9 @@
 package com.crm.qa.pages;
 
-import org.openqa.selenium.support.PageFactory;
+import com.crm.qa.webElements.DealsPageElements;
 
-import com.crm.qa.base.TestBase;
-
-public class DealsPage extends TestBase {
-	//Object Repository
+public class DealsPage extends DealsPageElements {
 	
-	//Constructor
-	public DealsPage() {
-		PageFactory.initElements(driver, this);
-	}
 	
 	//Methods
 	

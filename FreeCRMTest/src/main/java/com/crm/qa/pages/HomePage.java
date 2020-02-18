@@ -1,61 +1,8 @@
 package com.crm.qa.pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import com.crm.qa.pages.*;
-import com.crm.qa.base.TestBase;
+import com.crm.qa.webElements.HomePageElements;
 
-public class HomePage extends TestBase{
-	
-	//Links WebElement - Objects Repository
-	@FindBy(xpath="//span[@class=\"item-text\"]")
-	WebElement homePageLink;
-	
-	@FindBy(xpath="//span[contains(text(), 'Calendar')]")
-	WebElement calendarPageLink;
-	
-	@FindBy(xpath="//span[contains(text(), 'Contacts')]")
-	WebElement contactsPageLink;
-	
-	@FindBy(xpath="//span[contains(text(), 'Companies')]")
-	WebElement CompaniesPageLink;
-	
-	@FindBy(xpath="//span[contains(text(), 'Deals')]")
-	WebElement dealsPageLink;
-	
-	@FindBy(xpath = "//span[contains(text(), 'Tasks')]")
-	WebElement tasksPageLink;
-	
-	@FindBy(xpath="//span[contains(text(), 'Cases')]")
-	WebElement CasesPageLink;
-	
-	@FindBy(xpath="//span[contains(text(), 'Calls')]")
-	WebElement callsPageLink;
-	
-	@FindBy(xpath="//span[contains(text(), 'Documents')]")
-	WebElement documentsPageLink;
-		
-	@FindBy(xpath="//span[contains(text(), 'Email')]")
-	WebElement emailPageLink;
-	
-	@FindBy(xpath="//span[contains(text(), 'Campaigns')]")
-	WebElement campaignsPageLink;
-
-	@FindBy(xpath="//span[contains(text(), 'Forms')]")
-	WebElement formsPageLink;
-	
-	//other things
-	@FindBy(xpath="//span[@class=\"user-display\"]")
-	WebElement profileName;
-	
-	
-	
-	//constructor
-	public HomePage() {
-		PageFactory.initElements(driver, this);
-	}
-	
+public class HomePage extends HomePageElements{
 	
 	//Methods
 	public String verifyHomePageTitle() {

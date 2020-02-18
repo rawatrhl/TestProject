@@ -1,18 +1,9 @@
 package com.crm.qa.pages;
 
-import org.openqa.selenium.support.PageFactory;
+import com.crm.qa.webElements.TaskPageElements;
 
-import com.crm.qa.base.TestBase;
+public class TasksPage extends TaskPageElements {
 
-public class TasksPage extends TestBase {
-	//Object Repository
+	//Methods 
 	
-	
-	//Constructor
-	public TasksPage() {
-		PageFactory.initElements(driver, this);
-	}
-	
-	
-	//Methods
 }
